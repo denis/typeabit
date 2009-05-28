@@ -20,7 +20,7 @@ $(
             var jqResults = $("#results");
 
             for (i in data["responseData"]["results"]) {
-                jqResults.append("<li>" + data["responseData"]["results"][i]["title"] + ' <a href="' + data["responseData"]["results"][i]["visibleUrl"] + '">' + data["responseData"]["results"][i]["url"] + "</a></li>");
+                jqResults.append("<li>" + data["responseData"]["results"][i]["title"] + ' <a href="' + data["responseData"]["results"][i]["url"] + '">' + data["responseData"]["results"][i]["visibleUrl"] + "</a></li>");
             }
         }
 
