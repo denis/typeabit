@@ -4,16 +4,22 @@ $(
             var jqSuggestions = $("#suggestions");
             $("#results").html("");
 
-            if (!data[1][0]) {
-                return;
+            if (data[1][0]) {
+                var request = data[1][0][0];
+            } else {
+                var request = $("#q").val();
             }
 
             $.get(
-                "http://ajax.googleapis.com/ajax/services/search/web?v=1.0&hl=en&rsz=large&q=" + encodeURIComponent(data[1][0][0]),
+                "http://ajax.googleapis.com/ajax/services/search/web?v=1.0&hl=en&rsz=large&q=" + encodeURIComponent(request),
                 {},
                 function (data) { updateResults(data) },
                 "jsonp"
             );
+
+            if (!data[1][0]) {
+                return;
+            }
 
             for (i = 0; i < 5; i++) {
                 if (data[1][i]) {
