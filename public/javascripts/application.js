@@ -63,5 +63,7 @@ $(
         if (location.hash.length > 2) {
             $("#q").val(location.hash.substr(1)).keyup();
         }
+
+        $("#q").focus();
     }
 );
