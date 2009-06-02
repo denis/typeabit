@@ -1,0 +1,17 @@
+#results li {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    width: 308px;
+}
+
+#results li .thumbnail {
+    background: url(/images/bgs/thumbnail.png) no-repeat;
+    padding: 10px 18px 18px 10px;
+    width: 280px;
+    height: 202px;
+}
+
+#results li .link {
+    padding: 0 0 0 10px;
+}
